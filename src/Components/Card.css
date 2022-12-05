@@ -1,0 +1,32 @@
+.parent{
+    margin-top: 5rem;
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: row;
+    border: 1px black;
+}
+
+.div,.dive{
+    width: 8rem;
+    height: 1rem;
+    border: 1px black;
+    list-style: none;
+}
+.dive{
+    margin-right: 1rem;
+}
+
+.dive li{
+    width: 20rem;
+}
+img{
+    display: block;
+    height: 4rem;
+    object-fit: contain;
+    padding: 0.5rem;
+}
+
+li{
+    height: 5rem;
+    align-items: center
+}
