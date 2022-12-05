@@ -10,21 +10,27 @@ function App() {
   const [optionData,setOptionData]=useState([]);
 
   useEffect(()=>{
-    async function fetch(){
+    if(!data.length){
+    async function getData(){
       const data=await axios.get('https://607a90abbd56a60017ba2c5e.mockapi.io/Customer');
       const finaldata=data.data;
       setdata(finaldata);
 setOptionData(finaldata);       
-      
-      
+    }    
+    getData() 
     }
-    fetch();
+
   },[]);
-  function handleFilter(val){
-    if(val == '')
+  function handleFilter(val,name,filter='country'){
+    if(val == '' && !name){
     setdata(optionData)
+  }
+  else if(val == ''){
+    let localData=optionData.filter((itr)=>{return itr[filter]===name});
+    setdata(localData);
+  }
     else{
-    let localData=optionData.filter((itr)=>{return itr.country===val});
+    let localData=optionData.filter((itr)=>{return itr[filter]===val});
     setdata(localData);
     }
   }

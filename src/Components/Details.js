@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState ,useEffect} from 'react';
 import {useParams} from 'react-router-dom';
+import './Details.css';
 
 
 
@@ -16,8 +17,11 @@ function Details(props) {
         setdata(data)
                 }
   return (
-    <div>
-     <li>Name:{data?.name}</li> 
+    <div className='outer'>
+        <div><img src={`https://randomuser.me/api/portraits/${data.women?'women':'men'}/${data.id}.jpg`} alt='an iteration'/>
+        <li>Name:{data?.name}</li> 
+        </div>
+     <div>
      <li>City:{data?.country}</li> 
      <li>Country:{data?.country}</li> 
      <li>Zipcode:{data?.zipcode}</li> 
@@ -25,7 +29,7 @@ function Details(props) {
      <li>Email:{data?.email}</li> 
      <li>Phone:{data?.phone}</li> 
      <li>Gender:{data?.women?'women':'men'}</li> 
-     <li></li> 
+     </div>
     </div>
   )
 }

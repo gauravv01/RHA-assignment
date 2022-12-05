@@ -1,24 +1,12 @@
-.parent{
+table{
     margin-top: 5rem;
-    margin-left: 5rem;
-    display: flex;
-    flex-direction: row;
-    border: 1px black;
+    border: 4px solid black;
 }
 
-.div,.dive{
-    width: 8rem;
-    height: 1rem;
-    border: 1px black;
-    list-style: none;
-}
-.dive{
-    margin-right: 1rem;
+th,td{
+  border: 1px solid black;
 }
 
-.dive li{
-    width: 20rem;
-}
 img{
     display: block;
     height: 4rem;
@@ -26,7 +14,3 @@ img{
     padding: 0.5rem;
 }
 
-li{
-    height: 5rem;
-    align-items: center
-}

@@ -1,0 +1,18 @@
+.outer{
+    border: 4px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 1px;
+    box-shadow: 1px 1px 1px;
+    list-style: none;
+}
+
+img{
+    width: 5rem;
+    object-fit: contain;
+}
+
+li{
+    margin-bottom: 1rem;
+}
